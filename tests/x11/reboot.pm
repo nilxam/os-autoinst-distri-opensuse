@@ -55,7 +55,7 @@ sub run() {
 
     assert_screen "grub2", 100;    # wait until reboot
     if ( get_var("ENCRYPT") ) {
-        wait_encrypt_prompt;
+        $self->pass_encrypt_check;
     }
 
     # 570_xfce_login_after_reboot

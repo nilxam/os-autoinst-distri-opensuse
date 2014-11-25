@@ -1,11 +1,13 @@
-use base "installbasetest";
+use strict;
+use base "y2logsstep";
 use testapi;
 
 sub run() {
     my $self = shift;
 
-    assert_screen "reboot_after_install", 200;
+    $self->pass_encrypt_check;
 }
 
 1;
+
 # vim: set sw=4 et:
